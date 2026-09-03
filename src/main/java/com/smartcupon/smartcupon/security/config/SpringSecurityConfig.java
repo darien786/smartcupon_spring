@@ -56,7 +56,7 @@ public class SpringSecurityConfig {
                         .requestMatchers("/api/auth/users/login").permitAll()
                         .requestMatchers("/api/auth/clients/login").permitAll()
                         .requestMatchers(HttpMethod.POST,"/api/auth/clients/register").permitAll()
-                        .requestMatchers("/api/auth/users/**").hasRole("ADMIN")
+                        .requestMatchers("/api/users/**").hasRole("ADMIN")
                         //Para cuando son ambos
                         //.requestMatchers("/api/auth/users").hasAnyRole("ADMIN")
                         .anyRequest().denyAll()
